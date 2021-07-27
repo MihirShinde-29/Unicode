@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6b41092c58.js" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Productivity Tracker</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+            <i class="fas fa-chart-bar"></i><span class="text-success"> Productivity</span>Tracker
+        </h1>
+        <ul class="nav nav-tabs mt-4">
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="routineManager.html">Routine Manager</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#">Expense Manager</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade" id="task">  
+            </div>
+            <div class="tab-pane fade show active sub-container" id="expense">
+                <div class="row" id="display-amount">
+                    <div class="col-lg-6 col-md-6 col-sm-6 text-center mt-4">                        
+                        <h1><img class="text-primary text-image" src="images/income.png" alt="">  Income: </h1>
+                        <img class="image" src="images/income.png" alt="">
+                        <h1 class="text-success mt-2" id="income-ui"></h1>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 text-center mt-4">
+                        <h1><img class="text-primary text-image" src="images/savings.png" alt="">  Savings: </h1>
+                        <img class="image" src="images/savings.png" alt="">
+                        <h1 class="text-success mt-2" id="savings-ui"></h3>
+                    </div>
+                </div>
+                <hr>
+                <div id="form-div">
+                    <div class="row">
+                        <div class="col-lg-6 income-container">
+                            <h3 class="text-center mt-2" id="budget-text">BUDGET</h3>
+                            <form action="" id="balance-form">
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
+                                        <label class="mt-2" for="income">Income:</label>
+                                        <input type="text" id="income" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <label class="mt-2" for="saving">Saving:</label>
+                                        <input type="text" id="saving" class="form-control" placeholder="">
+                                    </div>
+                                    <button class="btn btn-outline-primary mt-4 submit">ADD TO AMOUNT</button>
+                                    <div class="reset-container">
+                                        <button class="btn btn-outline-danger mt-4 reset-income">RESET INCOME</button>
+                                        <button class="btn btn-outline-danger mt-4 reset-saving">RESET SAVINGS</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-6 expense-container">
+                            <h3 class="text-center mt-3">EXPENSE</h3>
+                            <form action="" id="expense-form">
+                                <div class="row">
+                                    <div class="form-group col-lg-6">
+                                        <label class="mt-1" for="title">Title:</label>
+                                        <input type="text" id="title" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-lg-4 col-md-9 col-sm-9">
+                                        <label class="mt-1" for="price">Price:</label>
+                                        <input type="text" id="price" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-lg-2 col-md-3 col-sm-3">
+                                        <label class="mt-1" for="quantity">Quantity:</label>
+                                        <input type="text" id="quantity" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mt-1" for="total-amount">Total Amount:</label>
+                                        <input type="text" id="total-amount" class="form-control" placeholder="">
+                                    </div>
+                                    <button class="btn btn-outline-primary mt-3 expense">ADD TO EXPENSES</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <h3 class="text-center mt-3">EXPENSE TABLE</h3>
+                    <table class="table table-hover mt-3">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total Price</th>
+                                <th></th>
+                            </tr>    
+                        </thead>
+                        <tbody id="expense-list"></tbody>
+                    </table>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    <script src="js/expense.js"></script>
+</body>
+</html>

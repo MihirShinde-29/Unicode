@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6b41092c58.js" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Productivity Tracker</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+            <i class="fas fa-chart-bar"></i><span class="text-success"> Productivity</span>Tracker
+        </h1>
+        <ul class="nav nav-tabs mt-4">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#">Routine Manager</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="expenseManager.html">Expense Manager</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade show active sub-container" id="task-container">  
+                <h3 class="text-center mt-3" id="task-text">ENTER YOUR TASK</h3>              
+                <form action="" id="task-form">
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <label class="mt-2" for="name">Name:</label>
+                            <input type="text" id="name" class="form-control" placeholder="eg. Making your blog . . .">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label class="mt-2" for="time">Time:</label>
+                            <input type="text" id="time" class="form-control" placeholder="in hours">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label class="mt-2" for="date">Date:</label>
+                            <input type="date" id="date" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label class="mt-2" for="priority">Is it compulsory?</label>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="compulsion" value="yes" checked="">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="compulsion" value="no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                        <input class="btn btn-outline-primary mt-3" type="submit" value="ADD TASKS">
+                    </div>
+                </form>
+                <hr>
+                <div class="mt-2" id="total-time">
+                    <span class="fs-4">Total Time Spent: <span id="time-spent" class="text-success"></span> hr</span> 
+                    <button class="btn btn-danger btn-sm float-end reset">Reset Time Spent</button>
+                </div>
+                <hr>
+                <h3 class="text-center mt-3">TASK TABLE</h3>
+                <table class="table table-hover mt-3">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Name</th>
+                            <th>Time</th>
+                            <th>Date</th>
+                            <th>Compulsion</th>
+                            <th></th>
+                        </tr>    
+                    </thead>
+                    <tbody id="task-list"></tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="profile">
+            </div>            
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
