@@ -1,0 +1,16 @@
+/* For Radio Button */
+
+.filter-switch label {
+    cursor: pointer;
+}  
+.filter-switch-item input:checked + label {
+    color: inherit;
+}
+.filter-switch-item input:not(:checked) + label {
+    --tw-bg-opacity: 0;
+    box-shadow: none;
+}
+
+#toggle:checked ~ label div.toggle-dot {
+    --tw-translate-x: 0.75rem;
+}
