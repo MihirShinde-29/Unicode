@@ -1,5 +1,4 @@
 /* For Radio Button */
-
 .filter-switch label {
     cursor: pointer;
 }  
@@ -11,6 +10,7 @@
     box-shadow: none;
 }
 
+/* For DarkMode Button */
 #toggle:checked ~ label div.toggle-dot {
     --tw-translate-x: 0.75rem;
 }
