@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Style Tags -->
     <link rel="stylesheet" href="dist/style.css">
     <link rel="stylesheet" href="dist/main.css">
     <link rel="stylesheet" href="src/style.css">
+    
     <title>Co-WIN</title>
 </head>
 <body class="bg-gray-200 dark:bg-gray-900">
+
+  <!-- Header -->
   <div class="bg-white dark:bg-gray-800 py-4 px-6 flex max-w-full justify-between">
     <div>
       <h1 class="sm:text-5xl text-3xl font-bold text-blue-800 dark:text-blue-200 font-sans md:mx-6">Co-WIN</h1>
       <h1 class="sm:text-md text-xs font-medium text-blue-800 dark:text-blue-200 font-sans md:mx-12 sm:mx-6">Winning Over COVID - 19</h1>
     </div>
+
+    <!-- Dark Mode Button -->
     <div class=" flex justify-end items-center space-x-2 md:mr-6">
       <span class="text-gray-800 dark:text-gray-500">Light</span>
       <div>
@@ -29,9 +36,17 @@
     </div>
   </div>
   <hr class="border-gray-400 shadow-xl">
-  <div class="container p-2 mx-6 my-6 md:p-6 md:mx-12 md:my-12 w-auto bg-white dark:bg-gray-800 dark:text-gray-200 dark: rounded-lg shadow-lg border-1 border-gray-400">
+
+  <!-- Grid -->
+  <div class="container p-2 mx-6 my-6 md:p-6 md:mx-12 md:my-12 w-auto bg-white dark:bg-gray-800 dark:text-gray-200 
+    rounded-lg shadow-lg border-1 border-gray-400"
+  >
+    
+    <!-- Form -->
     <form class="text-center" action="" id="search-form">
       <div class="flex flex-row flex-wrap justify-around">
+        
+        <!-- Pincode -->
         <div class="px-6 md:mb-6 flex-grow text-left">
           <h1 class="text-lg my-2">Enter Your PIN:</h1>
           <input 
@@ -39,6 +54,8 @@
             focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50 w-4/5" 
             type="text" name="pincode" id="pincode">
         </div>
+        
+        <!-- Date -->
         <div class="px-6 md:mb-6 flex-grow text-left">
           <h1 class="text-lg my-2">Date:</h1>
           <input 
@@ -46,7 +63,11 @@
           focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50 w-4/5" 
           type="date" name="date" id="date">
         </div>
+        
+        <!-- Group -->
         <div class="flex flex-row flex-wrap flex-grow justify-around">
+          
+          <!-- Vaccine -->
           <div class="flex flex-col flex-grow px-6 md:mb-6 items-start">         
             <h1 class="text-lg mt-2 mr-3">Vaccine:</h1>
             <div class="flex-grow-0">
@@ -90,7 +111,11 @@
               </ul>
             </div>
           </div>
+          
+          <!-- Sub-Group -->
           <div class="flex flex-col flex-grow items-start">
+            
+            <!-- Cost -->
             <div class="flex flex-row md:px-3 px-6">
               <h1 class="text-lg mt-6 mr-3">Cost:</h1>
               <ul id="filter2" 
@@ -124,6 +149,8 @@
                 </li>
               </ul>            
             </div>
+            
+            <!-- Age -->
             <div class="flex flex-row md:px-3 px-6">
               <h1 class="text-lg mt-6 mr-3">Age:</h1>
               <ul id="filter1" 
@@ -159,6 +186,8 @@
             </div>
           </div>
         </div>
+        
+        <!-- Submit Button -->
         <button 
           class="bg-blue-500 text-gray-200 text-2xl font-bold w-4/5 px-4 py-2 my-3 rounded hover:bg-blue-600 hover:text-gray-300
           focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 focus:bg-blue-600 focus:text-gray-300
@@ -168,9 +197,12 @@
         >Search</button>
       </div>
     </form>
+    
+    <!-- Output Table -->
     <table class="table-fixed border-collapse border border-gray-800 dark:broder-gray-200 mt-3" id="output"></table>
   </div>
 
+  <!-- Script Tag -->
   <script src="js/main.js"></script>
 </body>
 </html>
