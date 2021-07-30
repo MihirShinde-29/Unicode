@@ -41,9 +41,9 @@ class UI {
         <td>${expense.quantity}</td>
         <td>${expense.totalPrice}</td>
         <td>
-            <a href = "#" class = "btn btn-success btn-sm pay">Pay</a>  
-            <a href = "#" class = "btn btn-danger btn-sm delete">X</a>  
-            <a href = "#" class = "btn btn-dark btn-sm edit">Edit</a>  
+            <a href = "#" class = "btn btn-success btn-sm pay action">Pay</a>  
+            <a href = "#" class = "btn btn-danger btn-sm delete action">X</a>  
+            <a href = "#" class = "btn btn-dark btn-sm edit action">Edit</a>  
         </td>
         `;
         
@@ -145,6 +145,11 @@ class UI {
         }
 
         document.querySelector('#savings-ui').textContent = Store.getSavings();
+
+        if (document.querySelector('#savings-ui').classList.contains('text-danger')) {
+            document.querySelector('#savings-ui').classList.remove('text-danger');
+            document.querySelector('#savings-ui').classList.add('text-success');
+        }
     }
 
     static clearExpenseFields() {
@@ -276,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Event Class
 document.querySelector('#expense-form').addEventListener('click', (e) => {
     e.preventDefault();
-    if (e.target.classList.contains('expense')) {
+    if (e.target.classList.contains('submit')) {
         // Get form values
         const title = document.querySelector('#title').value;
         const price = document.querySelector('#price').value;
@@ -335,7 +340,7 @@ document.querySelector('#balance-form').addEventListener('click', (e) => {
             }
             
             // Show success message
-            UI.showAlert('Aomunt Updated', 'success');
+            UI.showAlert('Amount Updated', 'success');
     
             // Clear fields
             UI.clearIncomeFields();

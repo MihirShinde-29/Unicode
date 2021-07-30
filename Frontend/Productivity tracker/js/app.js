@@ -5,7 +5,7 @@ class Task {
         this.time = time;
         this.date = date;
         this.compulsion = compulsion;
-        if (compulsion === "yes") {
+        if (compulsion === "Yes") {
             this.priority = 1;
         } else {
             this.priority = 0;
@@ -41,9 +41,9 @@ class UI {
         <td>${task.date}</td>
         <td>${task.compulsion}</td>
         <td>
-            <a href = "#" class = "btn btn-success btn-sm complete">✔️</a>
-            <a href = "#" class = "btn btn-danger btn-sm delete">X</a>
-            <a href = "#" class = "btn btn-dark btn-sm edit">Edit</a>
+            <a href = "#" class = "btn btn-success btn-sm complete action">✔️</a>
+            <a href = "#" class = "btn btn-danger btn-sm delete action">X</a>
+            <a href = "#" class = "btn btn-dark btn-sm edit action">Edit</a>
         </td>
         `;
         
@@ -195,15 +195,16 @@ document.querySelector('#task-form').addEventListener('submit', (e) => {
     // Get form values
     const name = document.querySelector('#name').value;
     const time = document.querySelector('#time').value;
-    const date = document.querySelector('#date').value;
+    const date = new Date(document.querySelector('#date').value);
+    const day = date.getDate().toString().padStart(2, 0) + '-' + (date.getMonth() + 1).toString().padStart(2, 0) + '-' + date.getFullYear().toString();
     const complusion = document.querySelector("input[type='radio'][name='compulsion']:checked").value;
     
     // Validate
-    if(name === '' || time === '' || time === '0' || date === '') {
+    if(name === '' || time === '' || time === '0' || day === '') {
         UI.showAlert('Please fill in all fields!', 'danger');
     } else {
         // Instatiate Task
-        const task = new Task(name, time, date, complusion);
+        const task = new Task(name, time, day, complusion);
     
         // Add Task to UI
         UI.addTaskToList(task);
