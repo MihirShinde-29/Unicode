@@ -1,10 +1,51 @@
 body {
-    background-color: #E8F0F2;
-    color: #053742;
+    background-color: #FFE6E6;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* 39A2DB
-A2DBFA */
+/* 
+FF2626
+BD1616
+*/
+
+.container {
+    width: 100%;
+    padding: 10px 75px;
+    margin: 0;
+}
+
+.sub-container {
+    padding: 0 25px;
+}
+
+.form-container {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 30px 50px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input {
+    text-align: left;
+    padding: 10px 10px 0;
+}
+
+.input input[type="text"],
+.input input[type="email"] {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+form .btn {
+    margin: 20px 0;
+    width: 60%;
+    padding: 15px 0;
+}
 
 #title {
     font-family: 'Pacifico', cursive;
@@ -13,13 +54,148 @@ A2DBFA */
 }
 
 #navbar {
-      align-items: center;
+    width: 100%;
+    background-color: #FF2626;
+    height: 80px;
+    padding-left: 100px;
+    margin-bottom: 30px;
 }
 
-.container-1 {
-    width: 70%;
+.nav-link {
+    margin-right: 20px;
+    font-size: 2rem;
+    color: #ECE4B7 !important;
 }
 
-.container-1 {
-    width: 30%;
+.nav-link:hover {
+    color: #A5D8FF !important;
+}
+
+.carousel-item {
+    height: 500px;
+    padding: 200px 70px;
+    text-align: center;
+    font-size: small;
+}
+
+.slide-1 {
+    background: url("../images/spotify.jpg") no-repeat center center;
+}
+
+.slide-2 {
+    background: url("../images/Game.jpg") no-repeat center center;
+}
+
+.slide-3 {
+    background: url("https://cdn.corporatefinanceinstitute.com/assets/artificial-intelligence-1024x512.jpeg") no-repeat center center;
+}
+
+#posts {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#posts img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.post {
+    margin: 20px 0;
+}
+
+#about h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    margin-left: 50px;
+}
+
+#about p {
+    text-align: left;
+    font-size: large;
+    word-spacing: 3px;
+}
+
+#about a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#about a:hover {
+    text-decoration: underline;
+    color: #BD1616;
+
+}
+
+#about img {
+    width: 120px;
+    border-radius: 100%;
+    margin-left: 30px;
+}
+
+#about img:hover {
+    border: #FF2626 3px solid;
+}
+
+#subscribe {
+    text-align: center;
+}
+
+#radio1 {
+    margin-bottom: 10px;
+}
+
+#contact {
+    text-align: center;
+    padding: 20px;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #02020B;
+    margin: 5px 20px;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #BD1616;
+
+}
+
+#footer {
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #FF2626;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
 }
