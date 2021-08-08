@@ -68,7 +68,6 @@ class UI {
             document.querySelector('#price').value == 0  && 
             document.querySelector('#quantity').value == 0) {
                 let expense = ed.parentElement.parentElement.querySelectorAll('td');
-                console.log(expense);
                 let title = expense[0].textContent;
                 let price = expense[1].textContent;
                 let quantity = expense[2].textContent;
