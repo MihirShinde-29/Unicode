@@ -76,6 +76,25 @@ form .btn {
     padding: 200px 70px;
     text-align: center;
     font-size: small;
+    border-radius: 5px;
+}
+
+.carousel-item h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 0 4px #BD1616;
+}
+
+.carousel-item a {
+    color: #FF2626;
+    text-decoration: none;
+}
+
+.carousel-item a:hover {
+    text-decoration: underline;
+    color: #BD1616;
+    text-shadow: 0 0 4px #000000;
 }
 
 .slide-1 {
@@ -92,12 +111,13 @@ form .btn {
 
 #posts {
     text-align: center;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
 #posts img {
     width: 100%;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .post {
@@ -106,8 +126,10 @@ form .btn {
 
 #about h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 50px;
+    color: #FF2626;
+    font-size: 80px;
     margin-left: 50px;
+    text-align: left;
 }
 
 #about p {
@@ -124,13 +146,12 @@ form .btn {
 #about a:hover {
     text-decoration: underline;
     color: #BD1616;
-
 }
 
 #about img {
     width: 120px;
     border-radius: 100%;
-    margin-left: 30px;
+    margin: 0 50px;
 }
 
 #about img:hover {
@@ -154,6 +175,10 @@ form .btn {
     text-decoration: none;
     color: #02020B;
     margin: 5px 20px;
+}
+
+#contact i {
+    margin-right: 5px;
 }
 
 #contact a:hover {
@@ -186,6 +211,10 @@ form .btn {
     .container {
         max-width: 100%;
     }
+
+    #about img {
+        margin: 0 10px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -198,4 +227,10 @@ form .btn {
     .container {
         max-width: 100%;
     }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 5px 25px;
+    }    
 }
